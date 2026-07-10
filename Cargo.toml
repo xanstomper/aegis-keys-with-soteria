@@ -27,6 +27,10 @@ zeroize = { version = "1.8", features = ["derive"] }
 [dev-dependencies]
 hex = "0.4"
 
+[[bin]]
+name = "aegis"
+path = "src/bin/aegis.rs"
+
 [profile.release]
 lto = "fat"
 codegen-units = 1
