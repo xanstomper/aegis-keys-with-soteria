@@ -1,0 +1,34 @@
+[package]
+name = "soteria-aegis"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0 OR MIT"
+description = "Soteria Aegis — protected 'AegisKey' wrapper around the Soteria-FS cryptography & key-hierarchy methodology (Argon2id -> HKDF domain-separated keys, AEAD key slots, zeroization)."
+readme = "README.md"
+repository = "https://github.com/xanstomper/soteria-aegis"
+homepage = "https://github.com/xanstomper/soteria-aegis"
+keywords = ["cryptography", "encryption", "key-management", "soteria", "aegis"]
+categories = ["cryptography"]
+rust-version = "1.74"
+
+[dependencies]
+aes-gcm = "0.10"
+argon2 = "0.5"
+blake3 = "1.5"
+chacha20poly1305 = "0.10"
+hkdf = "0.12"
+libc = "0.2"
+rand = "0.8"
+sha2 = "0.10"
+thiserror = "1.0"
+subtle = "2.5"
+zeroize = { version = "1.8", features = ["derive"] }
+
+[dev-dependencies]
+hex = "0.4"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = "symbols"
