@@ -41,5 +41,5 @@ fn main() {
     assert_eq!(format!("{:?}", vault.master()), "AegisKey(<redacted>)");
     println!("[ok] master key is protected (redacted Debug)");
 
-    println!("== Aegis online. ==\nRepository: https://github.com/xanstomper/soteria-aegis");
+    println!("== Aegis online. ==\nRepository: https://github.com/xanstomper/aegis-keys-with-soteria");
 }
